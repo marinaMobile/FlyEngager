@@ -141,7 +141,7 @@ class AboutEnemyAndRulesFragment : Fragment() {
     private fun initAlertDialog() {
         AlertDialog.Builder(requireContext())
             .setTitle("Game rules")
-            .setMessage("You have ten missile. \nEach missile can deal damage from 1 to $missileDamageMax.\nThe enemy's total health  is 100 units. \nRockets can be fired every 3 seconds. \nIf you can destroy all the enemy's health balance - you win and get reward, if not - you lose and have to try again.\n\nAll clear?")
+            .setMessage("You have ten missile. \nEach missile can deal damage from 1 to $missileDamageMax.\nThe enemy's total health  is 100 units. \nRockets can be fired every 2 seconds. \nIf you can destroy all the enemy's health balance - you win and get reward, if not - you lose and have to try again.\n\nAll clear?")
             .setPositiveButton("Yes, start") { _, _ ->
                 findNavController().navigate(R.id.action_aboutEnemyAndRulesFragment_to_gameeeFragment)
             }
