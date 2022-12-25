@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/sasha_back"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".one.fffrrrragg.AboutEnemyAndRulesFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_95gttg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_50fgrr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_05gt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_95gtgtt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_05gt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+
+    <ImageView
+        android:id="@+id/img_enemy_logo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/airplane_good"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt"
+        app:layout_constraintTop_toBottomOf="@id/tv_enemy_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_enemy_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/montserrat_black"
+        android:gravity="center"
+        android:lines="1"
+        android:text="starlord"
+        android:textAllCaps="true"
+        android:textColor="#F6CACA"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_05gt" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/scroll"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt"
+        app:layout_constraintTop_toBottomOf="@id/img_enemy_logo"
+        app:layout_constraintBottom_toTopOf="@id/btn_play_gameeee">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_about_enemy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/open_sans_bold"
+            android:paddingStart="16dp"
+            android:textSize="12sp"
+            android:text="Blackout was a powerful and violently loyal Decepticon, even a Third-in-Command to Megatron after Starscream. It was rare to not see him looming silently near Megatron, but if he was not by his masters side, he would be serving him in the field. Blackout also had a symbiotic companion named Scorponok. Blackout flew to the Us SOCCENT base in Qatar. His refusal to identify himself caused the base to send two F-22's to escort him. Suspicions were further raised when one of the pilots reported the registry number 4500X, a helicopter which had been destroyed three months prior. With soldiers surrounding him from all sides, Blackout then transformed and began his attack. He made his way to the operations bunker and tore off the roof. Blackout tried to download some classified data, but was thwarted when men cut the physical hard line.\n\n Try to DESTROY him!\n\nAre you ready?"
+            android:textColor="#0E0D0D"
+            />
+
+    </ScrollView>
+
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_play_gameeee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_black"
+        android:text="confirm"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textColor="#F6CACA"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_95gttg" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

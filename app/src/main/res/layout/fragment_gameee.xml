@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/sasha_back"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".one.fffrrrragg.GameeeFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_10ddd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_05gt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_13dd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_95gttg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_85ddd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_50fgrr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_95gtgtt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_05gt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.40" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_50gtgtg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <ImageView
+        android:id="@+id/img_enemy"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/enemy_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_05gt"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lot_explosion"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:elevation="1dp"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_05gt"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/explosion" />
+
+    <ProgressBar
+        android:id="@+id/prog_bar_halth"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:progressDrawable="@drawable/custom_prog_bar"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt"
+        app:layout_constraintTop_toBottomOf="@id/img_enemy"
+        tools:progress="50" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enemy_health"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        android:textColor="#270101"
+        android:fontFamily="@font/montserrat_black"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth"
+        android:layout_marginTop="4dp"
+        tools:text="10/100"/>
+
+    <ImageView
+        android:id="@+id/img_missile_1"
+        android:layout_width="30dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/missile"
+        app:layout_constraintBottom_toTopOf="@id/img_you"
+        app:layout_constraintEnd_toStartOf="@id/img_missile_2"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth" />
+
+    <ImageView
+        android:id="@+id/img_missile_2"
+        android:layout_width="30dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/missile"
+        app:layout_constraintBottom_toTopOf="@id/img_you"
+        app:layout_constraintEnd_toStartOf="@id/img_missile_3"
+        app:layout_constraintStart_toEndOf="@id/img_missile_1"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth" />
+
+    <ImageView
+        android:id="@+id/img_missile_3"
+        android:layout_width="30dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/missile"
+        app:layout_constraintBottom_toTopOf="@id/img_you"
+        app:layout_constraintEnd_toStartOf="@id/img_missile_4"
+        app:layout_constraintStart_toEndOf="@id/img_missile_2"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth" />
+
+    <ImageView
+        android:id="@+id/img_missile_4"
+        android:layout_width="30dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/missile"
+        app:layout_constraintBottom_toTopOf="@id/img_you"
+        app:layout_constraintStart_toEndOf="@id/img_missile_3"
+        app:layout_constraintEnd_toStartOf="@id/img_missile_5"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth" />
+
+    <ImageView
+        android:id="@+id/img_missile_5"
+        android:layout_width="30dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/missile"
+        app:layout_constraintBottom_toTopOf="@id/img_you"
+        app:layout_constraintStart_toEndOf="@id/img_missile_4"
+        app:layout_constraintEnd_toStartOf="@id/img_missile_6"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth" />
+
+    <ImageView
+        android:id="@+id/img_missile_6"
+        android:layout_width="30dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/missile"
+        app:layout_constraintStart_toEndOf="@id/img_missile_5"
+        app:layout_constraintEnd_toStartOf="@id/img_missile_7"
+        app:layout_constraintBottom_toTopOf="@id/img_you"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth" />
+
+    <ImageView
+        android:id="@+id/img_missile_7"
+        android:layout_width="30dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/missile"
+        app:layout_constraintStart_toEndOf="@id/img_missile_6"
+        app:layout_constraintEnd_toStartOf="@id/img_missile_8"
+        app:layout_constraintBottom_toTopOf="@id/img_you"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth" />
+
+    <ImageView
+        android:id="@+id/img_missile_8"
+        android:layout_width="30dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/missile"
+        app:layout_constraintBottom_toTopOf="@id/img_you"
+        app:layout_constraintStart_toEndOf="@id/img_missile_7"
+        app:layout_constraintEnd_toStartOf="@id/img_missile_9"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth" />
+
+    <ImageView
+        android:id="@+id/img_missile_9"
+        android:layout_width="30dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/missile"
+        app:layout_constraintStart_toEndOf="@id/img_missile_8"
+        app:layout_constraintEnd_toStartOf="@id/img_missile_10"
+        app:layout_constraintBottom_toTopOf="@id/img_you"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth" />
+
+    <ImageView
+        android:id="@+id/img_missile_10"
+        android:layout_width="30dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/missile"
+        app:layout_constraintStart_toEndOf="@id/img_missile_9"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintBottom_toTopOf="@id/img_you"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_halth" />
+
+
+    <ImageView
+        android:id="@+id/img_you"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="16dp"
+        android:rotation="30"
+        android:scaleType="centerInside"
+        android:src="@drawable/aaaa"
+        app:layout_constraintBottom_toTopOf="@id/btn_make_damage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_make_damage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_black"
+        android:text="strike missile"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_95gttg"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
