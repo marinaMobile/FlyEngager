@@ -9,4 +9,10 @@ class AviOne : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_avi_one)
     }
+
+    companion object{
+        val KEY_BALAMCE = "balance"
+        val MAIN_KEY_SHARED_PREF_BALANVE = "VOLCANO_BAL_SP"
+        val KEY_GAME_VARIANT = "gaaame"
+    }
 }
