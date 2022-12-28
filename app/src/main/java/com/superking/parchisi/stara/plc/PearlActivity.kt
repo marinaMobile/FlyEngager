@@ -316,7 +316,6 @@ class PearlActivity : AppCompatActivity() {
             }
             "policy" -> {
                 aft = "$linkNO$linkNT$linkNTH"
-                Toast.makeText(this, "LINK POLICY $aft", Toast.LENGTH_SHORT).show()
                 Log.d("TESTAG", "urururururururur policy: $aft")
             }
         }
