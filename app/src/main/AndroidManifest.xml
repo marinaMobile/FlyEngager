@@ -28,6 +28,8 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name=".two.AviTwo"
+            android:exported="false"/>
         <activity
             android:name=".plc.Brilliant"
             android:exported="false">
@@ -36,35 +38,45 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".plc.PearlActivity"
+            android:name=".two.AviaSecRes"
+            android:noHistory="true"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".two.AviTwo"
+            android:name=".two.AviaSecTable"
+            android:noHistory="true"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".set.AviSet"
+            android:name=".two.FlySecScr"
+            android:noHistory="true"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".one.AviOne"
-            android:exported="true">
+            android:name=".AviSet"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".plc.MainActivity"
+            android:name=".AviOne"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -84,6 +96,21 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".set.AviSet"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".one.AviOne"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

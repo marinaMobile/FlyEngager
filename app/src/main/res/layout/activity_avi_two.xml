@@ -3,7 +3,205 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/bbbackg"
     android:layout_height="match_parent"
     tools:context=".two.AviTwo">
+
+    <TextView
+        android:id="@+id/tv_choose_takeoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jost_bold"
+        android:text="Choose your plane for this takeoff"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002" />
+
+    <ImageView
+        android:id="@+id/img_plane_frst"
+        android:layout_width="180dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_takeoff"
+        app:layout_constraintVertical_bias="0.050000012"
+        app:srcCompat="@drawable/pl_sec_gm" />
+
+    <ImageView
+        android:id="@+id/img_plane_sec"
+        android:layout_width="180dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_plane_frst"
+        app:layout_constraintVertical_bias="0.06999999"
+        app:srcCompat="@drawable/airplane_red" />
+
+    <ImageView
+        android:id="@+id/img_third_plane"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_plane_sec"
+        app:layout_constraintVertical_bias="0.16000003"
+        app:srcCompat="@drawable/airplane_good" />
+
+    <TextView
+        android:id="@+id/tv_chs_engine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jost_bold"
+        android:text="Choose your engine power points"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17000002" />
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/jost_bold"
+        android:layout_height="wrap_content"
+        android:text="1."
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_chs_engine"
+        app:layout_constraintTop_toBottomOf="@+id/tv_chs_engine"
+        app:layout_constraintVertical_bias="0.120000005" />
+
+    <RadioButton
+        android:id="@+id/hund_rad_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="100 xp power"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/jost_bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_one"
+        app:layout_constraintStart_toEndOf="@+id/tv_one"
+        app:layout_constraintTop_toTopOf="@+id/tv_one" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2."
+        android:visibility="gone"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/jost_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_one"
+        app:layout_constraintStart_toStartOf="@+id/tv_one"
+        app:layout_constraintTop_toBottomOf="@+id/tv_one"
+        app:layout_constraintVertical_bias="0.24000001" />
+
+    <RadioButton
+        android:id="@+id/three_hund_rad_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="300 xp power"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:fontFamily="@font/jost_bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_two"
+        app:layout_constraintStart_toEndOf="@+id/tv_two"
+        app:layout_constraintTop_toTopOf="@+id/tv_two" />
+
+    <TextView
+        android:id="@+id/tv_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jost_bold"
+        android:text="3."
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_two"
+        app:layout_constraintStart_toStartOf="@+id/tv_two"
+        app:layout_constraintTop_toBottomOf="@+id/tv_two"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <RadioButton
+        android:id="@+id/fifth_hund_rad_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="500 xp power"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/jost_bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_three"
+        app:layout_constraintStart_toEndOf="@+id/tv_three"
+        app:layout_constraintTop_toTopOf="@+id/tv_three" />
+
+    <TextView
+        android:id="@+id/tv_attent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans_regular"
+        android:text="*Choose wisely, if you have more xp ur skill master going down"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/tv_mk_fly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:visibility="gone"
+        android:fontFamily="@font/jost_bold"
+        android:text="One more step to make your fly"
+        app:layout_constraintBottom_toTopOf="@+id/tv_chs_engine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_dash"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/avia_sec_clr"
+        android:fontFamily="@font/jost_bold"
+        android:text="Dashboard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90999997" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
