@@ -44,7 +44,6 @@ class MainClass: Application() {
             shP.edit().putString(myId, IDIN).apply()
             shP.edit().putString(instId, instID).apply()
             settings.edit().putBoolean("my_first_time", false).apply()
-
         } else {
             val shIDIN = shP.getString(myId, IDIN)
             trackerParams.setCustomUserId(shIDIN)
