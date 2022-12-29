@@ -14,11 +14,9 @@ import android.widget.Toast
 import com.appsflyer.AppsFlyerLib
 import com.google.android.material.snackbar.Snackbar
 import com.onesignal.OneSignal
-import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.databinding.ActivityPearlBinding
 import com.superking.parchisi.stara.plc.MainClass.Companion.C1
 import com.superking.parchisi.stara.plc.MainClass.Companion.MAIN_ID
-import com.superking.parchisi.stara.plc.MainClass.Companion.appsCheckChe
 import com.superking.parchisi.stara.plc.MainClass.Companion.deepL
 import com.superking.parchisi.stara.plc.MainClass.Companion.instId
 import com.superking.parchisi.stara.plc.MainClass.Companion.myId
@@ -86,7 +84,7 @@ class PearlActivity : AppCompatActivity() {
                 } catch (e: Exception) {
                     return false
                 }
-                view.loadUrl(url)
+//                view.loadUrl(url)
             }
 
 
@@ -255,7 +253,7 @@ class PearlActivity : AppCompatActivity() {
 
     private fun urururururururur(): String {
 
-        val spoon = getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
+//        val spoon = getSharedPreferences("SP_WEBVIEW_PREFS", MODE_PRIVATE)
         val sharPre = getSharedPreferences("SHARED_PREF",
             Context.MODE_PRIVATE)
 
@@ -320,7 +318,7 @@ class PearlActivity : AppCompatActivity() {
             }
         }
 
-        return spoon.getString("SAVED_URL", aft).toString()
+        return sharPre.getString("SAVED_URL", aft).toString()
     }
 
 
@@ -369,7 +367,7 @@ class PearlActivity : AppCompatActivity() {
         if (jgidhgjdk.canGoBack()) {
             if (exitexitexitexit) {
                 jgidhgjdk.stopLoading()
-                jgidhgjdk.loadUrl(urlfififif)
+                jgidhgjdk.loadUrl(firsl)
             }
             this.exitexitexitexit = true
             jgidhgjdk.goBack()
@@ -382,20 +380,20 @@ class PearlActivity : AppCompatActivity() {
         }
     }
 
-    var urlfififif = ""
+    var firsl = ""
     fun saveUrl(lurlurlurlurlur: String?) {
         if (!lurlurlurlurlur!!.contains("t.me")) {
 
-            if (urlfififif == "") {
-                urlfififif = getSharedPreferences(
-                    "SP_WEBVIEW_PREFS",
-                    AppCompatActivity.MODE_PRIVATE
+            if (firsl == "") {
+                firsl = getSharedPreferences(
+                    "SHARED_PREF",
+                    MODE_PRIVATE
                 ).getString(
                     "SAVED_URL",
                     lurlurlurlurlur
                 ).toString()
 
-                val spspspspsppspspsp = getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
+                val spspspspsppspspsp = getSharedPreferences("SHARED_PREF", MODE_PRIVATE)
                 val ededededededed = spspspspsppspspsp.edit()
                 ededededededed.putString("SAVED_URL", lurlurlurlurlur)
                 ededededededed.apply()

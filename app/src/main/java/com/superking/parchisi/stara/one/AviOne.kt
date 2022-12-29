@@ -3,6 +3,7 @@ package com.superking.parchisi.stara.one
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.superking.parchisi.stara.R
+import com.superking.parchisi.stara.set.AudioPlay
 
 class AviOne : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

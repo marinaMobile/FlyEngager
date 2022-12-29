@@ -4,8 +4,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.plc.MainClass.Companion.appsCheckChe
 import com.superking.parchisi.stara.plc.MainClass.Companion.codeCode
@@ -45,7 +43,7 @@ class FillAct : AppCompatActivity() {
         val intentNorm = Intent(this@FillAct, PearlActivity::class.java)
 
         if(che=="1") {
-            if(camp.contains("tdb2")&& dep.contains("tdb2")) {
+            if(camp.contains("tdb2")&&dep.contains("tdb2")) {
                 intentNorm.putExtra("WebInt", "campaign")
                 startActivity(intentNorm)
                 finish()
