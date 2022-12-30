@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() {
     val viewMainModel by viewModel<ViewModel>()
     val shareP: SharedPreferences by inject(named("SharedPreferences"))
 
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

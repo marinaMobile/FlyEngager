@@ -11,7 +11,7 @@
     app:cardElevation="3dp"
     app:cardCornerRadius="20dp"
     app:strokeWidth="2dp"
-    android:backgroundTint="#82071B"
+    android:backgroundTint="@color/black"
     app:strokeColor="@color/black"
     >
 
