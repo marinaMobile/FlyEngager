@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".plc.Brilliant"
-    android:background="@drawable/hghgg">
+    android:background="@drawable/hghgg"
+    android:id="@+id/llMain">
 
     <ImageView
         android:id="@+id/setTings"
