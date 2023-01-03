@@ -65,7 +65,8 @@ class AviaSecRes : AppCompatActivity() {
                 tvBalance.text = "Your won : + $wonner"
 
             }else {
-                    tvBalance.text = "Your balance is low"
+                    tvBalance.text = "Nothing won"
+                    Toast.makeText(this@AviaSecRes, "Your balance is low", Toast.LENGTH_LONG).show()
             }
                 }
 
