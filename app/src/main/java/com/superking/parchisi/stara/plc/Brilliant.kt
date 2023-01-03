@@ -9,6 +9,7 @@ import android.text.Layout
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.databinding.ActivityBrilliantBinding
 import com.superking.parchisi.stara.inapps.ShopActivity
@@ -29,25 +30,30 @@ class Brilliant : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindBril = ActivityBrilliantBinding.inflate(layoutInflater)
 
-        val shar = getSharedPreferences("BACK", Context.MODE_PRIVATE)
+        val shar = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
 
-        setContentView(bindBril.root)
+
+
 
         val settings = getSharedPreferences("PREFS_NAME", 0)
 
         if (settings.getBoolean("my_first_time", true)) {
             shar.edit().putInt("backgr", 4).apply()
+            setContentView(bindBril.root)
             settings.edit().putBoolean("my_first_time", false).apply()
         } else {
             val back = shar.getInt("backgr", 4)
             when (back) {
-                0 -> bindBril.llMain.setBackgroundResource(R.drawable.back_for_sale_1)
-                1 -> bindBril.llMain.setBackgroundResource(R.drawable.back_for_sale_2)
-                2 -> bindBril.llMain.setBackgroundResource(R.drawable.back_for_sale_3)
-                3 -> bindBril.llMain.setBackgroundResource(R.drawable.back_for_sale_4)
-                else -> bindBril.llMain.setBackgroundResource(R.drawable.hghgg)
+                0 -> bindBril.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_1)
+                1 -> bindBril.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_2)
+                2 -> bindBril.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_3)
+                3 -> bindBril.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_4)
+                else -> bindBril.root.setBackgroundResource(R.drawable.hghgg)
             }
+            setContentView(bindBril.root)
+
         }
+
 
 
 
@@ -95,6 +101,16 @@ class Brilliant : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        val shar = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
+        val back = shar.getInt("backgr", 4)
+        when (back) {
+            0 -> bindBril.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_1)
+            1 -> bindBril.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_2)
+            2 -> bindBril.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_3)
+            3 -> bindBril.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_4)
+            else -> bindBril.root.setBackgroundResource(R.drawable.hghgg)
+        }
+        setContentView(bindBril.root)
         AudioPlay.playAudio(this, R.raw.inf)
     }
 

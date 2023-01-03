@@ -19,28 +19,14 @@ class AviSet : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_avi_set)
         bindSet = ActivityAviSetBinding.inflate(layoutInflater)
-        val switchOne: Switch = findViewById(R.id.sitchTheme)
-        val switchTwo: Switch = findViewById(R.id.switchMusic)
-//
-//        bindSet.sitchTheme.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { _, isChecked ->
-//            if (isChecked) {
-//                Toast.makeText(this@AviSet, "checked", Toast.LENGTH_SHORT).show()
-//            } else {
-//                Toast.makeText(this@AviSet, "is not checked", Toast.LENGTH_SHORT).show()
-//            }
-//        })
+
+        bindSet.light.setOnClickListener {
+            this.setTheme(R.style.Theme_BrilliantPearl)
+        }
+
+
 
         bindSet.sbtBtn.setOnClickListener {
-            val statusSwitch1: String =
-                if (switchOne.isChecked) switchOne.textOn
-                    .toString() else switchOne.textOff.toString()
-            val statusSwitch2: String =
-                if (switchTwo.isChecked) switchTwo.textOn
-                    .toString() else switchTwo.textOff.toString()
-
-            Log.d("StatusSwitch", "Switch1 :$statusSwitch1\n" +
-                    "Switch2 :$statusSwitch2")
-//            Toast.makeText(this@AviSet, "Switch1 :$statusSwitch1\nSwitch2 :$statusSwitch2", Toast.LENGTH_LONG).show()
 
         }
 
