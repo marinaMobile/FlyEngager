@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.plc.MainClass.Companion.appsCheckChe
 import com.superking.parchisi.stara.plc.MainClass.Companion.codeCode
