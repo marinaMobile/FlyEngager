@@ -26,7 +26,7 @@ class LauuunchFragment : Fragment() {
     val KEY_BALANCE = KEY_BALAMCE
 
     private val sharBackground by lazy {
-        requireActivity().getSharedPreferences("BACK", Context.MODE_PRIVATE)
+        requireActivity().getSharedPreferences("BACKS", Context.MODE_PRIVATE)
     }
 
     private val settings by lazy {
