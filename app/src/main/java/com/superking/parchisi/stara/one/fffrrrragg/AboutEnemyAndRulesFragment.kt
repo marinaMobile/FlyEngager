@@ -1,5 +1,6 @@
 package com.superking.parchisi.stara.one.fffrrrragg
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -31,10 +32,14 @@ class AboutEnemyAndRulesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        fragmentReeeeeloadBinding = FragmentAboutEnemyAndRulesBinding.inflate(inflater, container, false)
-        return binding.root
-    }
 
+        fragmentReeeeeloadBinding =
+            FragmentAboutEnemyAndRulesBinding.inflate(inflater, container, false)
+
+        fragmentReeeeeloadBinding!!.root.setBackgroundResource(R.drawable.back_for_sale_3)
+
+            return fragmentReeeeeloadBinding!!.root
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
 

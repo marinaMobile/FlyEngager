@@ -28,7 +28,6 @@ import java.io.IOException
 
 class PearlActivity : AppCompatActivity() {
     private val ofjpeorjfperjg = 1
-
     // the same for Android 5.0 methods only
     var hfgjrtgjhkh: ValueCallback<Array<Uri>>? = null
     var kgjfhdkxf: String? = null
@@ -229,31 +228,24 @@ class PearlActivity : AppCompatActivity() {
     private fun webSettings() {
         val wstwstwstwst = jgidhgjdk.settings
         wstwstwstwst.javaScriptEnabled = true
-
         wstwstwstwst.useWideViewPort = true
-
         wstwstwstwst.loadWithOverviewMode = true
         wstwstwstwst.allowFileAccess = true
         wstwstwstwst.domStorageEnabled = true
         wstwstwstwst.userAgentString = wstwstwstwst.userAgentString.replace("; wv", "")
-
         wstwstwstwst.javaScriptCanOpenWindowsAutomatically = true
         wstwstwstwst.setSupportMultipleWindows(false)
-
         wstwstwstwst.displayZoomControls = false
         wstwstwstwst.builtInZoomControls = true
         wstwstwstwst.setSupportZoom(true)
-
         wstwstwstwst.pluginState = WebSettings.PluginState.ON
         wstwstwstwst.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
         wstwstwstwst.setAppCacheEnabled(true)
-
         wstwstwstwst.allowContentAccess = true
     }
 
     private fun urururururururur(): String {
 
-//        val spoon = getSharedPreferences("SP_WEBVIEW_PREFS", MODE_PRIVATE)
         val sharPre = getSharedPreferences("SHARED_PREF",
             Context.MODE_PRIVATE)
 
@@ -328,10 +320,7 @@ class PearlActivity : AppCompatActivity() {
 
         val pm = packageManager
         try {
-
             pm.getPackageInfo("org.telegram.messenger", PackageManager.GET_ACTIVITIES)
-
-
             return true
         } catch (e: PackageManager.NameNotFoundException) {
 
@@ -402,5 +391,5 @@ class PearlActivity : AppCompatActivity() {
             }
         }
     }
-
 }
+

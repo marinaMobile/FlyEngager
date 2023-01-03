@@ -45,6 +45,7 @@ class LauuunchFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         fragmentLauuunchBinding = FragmentLauuunchBinding.inflate(inflater, container, false)
+        fragmentLauuunchBinding!!.root.setBackgroundResource(R.drawable.back_for_sale_4)
         return binding.root
     }
 

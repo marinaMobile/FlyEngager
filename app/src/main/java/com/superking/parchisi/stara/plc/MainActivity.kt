@@ -6,7 +6,9 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.telephony.TelephonyManager
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.facebook.applinks.AppLinkData
 import com.superking.parchisi.stara.R
@@ -33,6 +35,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+//        Log.d("CountryCode", "onCreate: $countryCode")
 
         viewMainModel.pedor(this@MainActivity)
 

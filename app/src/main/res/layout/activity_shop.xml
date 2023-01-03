@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".inapps.ShopActivity"
-    android:id="@+id/shopLay">
+    android:id="@+id/shopLay"
+    android:background="@color/black">
 
 
     <androidx.viewpager2.widget.ViewPager2
