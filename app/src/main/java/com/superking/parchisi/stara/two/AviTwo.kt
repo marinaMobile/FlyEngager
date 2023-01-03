@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.databinding.ActivityAviTwoBinding
 
 class AviTwo : AppCompatActivity() {
@@ -16,6 +15,7 @@ class AviTwo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mainbind = ActivityAviTwoBinding.inflate(layoutInflater)
         setContentView(mainbind.root)
+
         bCheckNav()
         checkersRad()
         mainbind.imgPlaneFrst.setOnClickListener {
