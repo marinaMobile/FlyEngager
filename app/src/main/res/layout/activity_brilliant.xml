@@ -17,6 +17,18 @@
         app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/ic_baseline_settings_24" />
 
+    <TextView
+        android:id="@+id/balanceAirTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="24sp"
+        android:text="0"
+        android:fontFamily="@font/jost_bold"
+        android:textColor="@color/white"/>
+
 
     <ImageView
         android:id="@+id/imageView4"

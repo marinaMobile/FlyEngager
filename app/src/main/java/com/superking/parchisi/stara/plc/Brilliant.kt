@@ -11,8 +11,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.databinding.ActivityBrilliantBinding
+import com.superking.parchisi.stara.inapps.InappActiv
 import com.superking.parchisi.stara.inapps.ShopActivity
 import com.superking.parchisi.stara.one.AviOne
+import com.superking.parchisi.stara.plc.MainClass.Companion.AIR_BALANCE
 import com.superking.parchisi.stara.set.AudioPlay
 import com.superking.parchisi.stara.set.AviSet
 import com.superking.parchisi.stara.two.AviTwo
@@ -33,7 +35,17 @@ class Brilliant : AppCompatActivity() {
 
         setContentView(bindBril.root)
 
+
+
+
         val settings = getSharedPreferences("PREFS_NAME", 0)
+
+
+        val settingsForBalanceOfCoins = getSharedPreferences("COINS_BAL", MODE_PRIVATE)
+        var currentBalance = settingsForBalanceOfCoins.getInt(AIR_BALANCE.toString(), 0)
+
+        bindBril.balanceAirTextView.text = "$currentBalance+"
+
 
         if (settings.getBoolean("my_first_time", true)) {
             shar.edit().putInt("backgr", 4).apply()
@@ -64,19 +76,27 @@ class Brilliant : AppCompatActivity() {
 
         AudioPlay.playAudio(this, R.raw.inf)
 
+        bindBril.balanceAirTextView.setOnClickListener {
+            startActivity(Intent(this, InappActiv::class.java))
+            finish()
+        }
+
 
         bindBril.ploci.setOnClickListener {
             val intent = Intent(this, PearlActivity::class.java)
             intent.putExtra("WebInt", "policy")
             startActivity(intent)
+            finish()
         }
 
         bindBril.one.setOnClickListener {
             startActivity(Intent(this, AviOne::class.java))
+            finish()
         }
 
         bindBril.two.setOnClickListener {
             startActivity(Intent(this, AviTwo::class.java))
+            finish()
         }
 
         bindBril.shop.setOnClickListener {
@@ -85,10 +105,12 @@ class Brilliant : AppCompatActivity() {
 
         bindBril.setTings.setOnClickListener {
             startActivity(Intent(this, AviSet::class.java))
+            finish()
         }
 
         bindBril.shop.setOnClickListener {
             startActivity(Intent(this, ShopActivity::class.java))
+            finish()
         }
     }
 

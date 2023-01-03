@@ -290,9 +290,11 @@ class PearlActivity : AppCompatActivity() {
         val linkAB: String? = sharPre.getString(urlMain, null)
         val linkNO = "https://www.privacy"
         val linkNT = "policies.com/live/"
-        val linkNTH = "5a76664d-bd80-4436-ae49-0007b61b213c"
+        val linkNTH = "e0638d9d-11f4-4194-af55-8a8b10c66d2d"
 
         var aft = ""
+
+
 
         when (str) {
             "MT" -> {

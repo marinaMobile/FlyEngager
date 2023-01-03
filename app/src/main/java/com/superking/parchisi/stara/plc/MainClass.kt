@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import com.my.tracker.MyTracker
 import com.onesignal.OneSignal
+import com.qonversion.android.sdk.Qonversion
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
@@ -25,6 +26,7 @@ class MainClass: Application() {
 //        val userCo: String = "userCo"
         val codeCode: String = "uff"
         val deepL: String = "deepL"
+        var AIR_BALANCE = 500
     }
 
     override fun onCreate() {
@@ -44,6 +46,9 @@ class MainClass: Application() {
             shP.edit().putString(myId, IDIN).apply()
             shP.edit().putString(instId, instID).apply()
             settings.edit().putBoolean("my_first_time", false).apply()
+            //
+            val balance_sp = getSharedPreferences("COINS_BAL", MODE_PRIVATE)
+            balance_sp.edit().putInt(AIR_BALANCE.toString(),500).apply()
         } else {
             val shIDIN = shP.getString(myId, IDIN)
             trackerParams.setCustomUserId(shIDIN)
@@ -63,5 +68,10 @@ class MainClass: Application() {
         // OneSignal Initialization
         OneSignal.initWithContext(this)
         OneSignal.setAppId(ONESIGNAL_APP_ID)
+
+
+
+        Qonversion.setDebugMode()
+        Qonversion.launch(this, "lr-MpfSdtzztW9DUYxLxK6YUOahis0eR", false)
     }
 }
