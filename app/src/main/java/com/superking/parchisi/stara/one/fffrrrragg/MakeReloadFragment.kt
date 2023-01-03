@@ -52,7 +52,7 @@ class MakeReloadFragment : Fragment() {
 
             Log.d("lolo", "ReloadFrag vievModel is $mainViewModel")
 
-            totalBalance = totalBalanceSP.getInt(KEY_BALAMCE, 1000)
+            totalBalance = totalBalanceSP.getInt(KEY_BALAMCE, 500)
 
             val curentGameVariantPoints = mainViewModel.currentMode.value!!.priceForPlay
             val currentEnemyName = mainViewModel.currentMode.value!!.enemyName
@@ -63,7 +63,7 @@ class MakeReloadFragment : Fragment() {
                 when (it) {
 
                     GameVievModell.VIN -> {
-                        binding.tvRestartTest.text = "You destroyed him! \nYou also earned 100 points! \nMoving to the next enemy..."
+                        binding.tvRestartTest.text = "You destroyed him! \nYou also earned $curentGameVariantPoints points! \nMoving to the next enemy..."
                         totalBalance += curentGameVariantPoints
                         saveBalance()
 

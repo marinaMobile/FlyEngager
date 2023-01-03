@@ -57,7 +57,7 @@ class LauuunchFragment : Fragment() {
 
             makeAllVisible()
 
-            totalBalance = totalBalanceSP.getInt(KEY_BALANCE, 1000)
+            totalBalance = totalBalanceSP.getInt(KEY_BALANCE, 500)
 
 
 
