@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
@@ -22,6 +24,14 @@ import com.superking.parchisi.stara.one.utttils.GameVievModell
 class LauuunchFragment : Fragment() {
     val MAIN_KEY_SHARED_PREF_BALANCE = MAIN_KEY_SHARED_PREF_BALANVE
     val KEY_BALANCE = KEY_BALAMCE
+
+    private val sharBackground by lazy {
+        requireActivity().getSharedPreferences("BACKS", Context.MODE_PRIVATE)
+    }
+
+    private val settings by lazy {
+        requireActivity().getSharedPreferences("PREFS_NAME", 0)
+    }
 
     private var fragmentLauuunchBinding: FragmentLauuunchBinding? = null
     private val binding
@@ -51,14 +61,35 @@ class LauuunchFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
-            binding.root.background.alpha = 210
+
+//            if (settings.getBoolean("my_first_time", true)) {
+//                sharBackground.edit().putInt("backgr", 4).apply()
+//                settings.edit().putBoolean("my_first_time", false).apply()
+//            } else {
+            val back = sharBackground.getInt("backgr", 4)
+            when (back) {
+                0 -> binding.root.background =
+                    ContextCompat.getDrawable(requireContext(), R.drawable.back_for_sale_1)
+                1 -> binding.root.background =
+                    ContextCompat.getDrawable(requireContext(), R.drawable.back_for_sale_2)
+                2 -> binding.root.background =
+                    ContextCompat.getDrawable(requireContext(), R.drawable.back_for_sale_3)
+                3 -> binding.root.background =
+                    ContextCompat.getDrawable(requireContext(), R.drawable.back_for_sale_4)
+                else -> binding.root.background =
+                    ContextCompat.getDrawable(requireContext(), R.drawable.hghgg)
+            }
+//            }
+
+
+            binding.root.background.alpha = 218
 
             val savedGame = totalBalanceSP.getInt(KEY_GAME_VARIANT, 1)
             mainViewModel.checkSavedGame(savedGame)
 
             makeAllVisible()
 
-            totalBalance = totalBalanceSP.getInt(KEY_BALANCE, 1000)
+            totalBalance = totalBalanceSP.getInt(KEY_BALANCE, 500)
 
 
 
@@ -184,7 +215,7 @@ class LauuunchFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    private fun saveCurrnetGameVariant(gameVar:Int) {
+    private fun saveCurrnetGameVariant(gameVar: Int) {
         totalBalanceSP.edit().apply {
             putInt(KEY_GAME_VARIANT, gameVar)
             apply()

@@ -3,6 +3,7 @@ package com.superking.parchisi.stara.one
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.superking.parchisi.stara.R
+import com.superking.parchisi.stara.plc.MainClass.Companion.AIR_BALANCE
 import com.superking.parchisi.stara.set.AudioPlay
 
 class AviOne : AppCompatActivity() {
@@ -12,8 +13,8 @@ class AviOne : AppCompatActivity() {
     }
 
     companion object{
-        val KEY_BALAMCE = "balance"
-        val MAIN_KEY_SHARED_PREF_BALANVE = "VOLCANO_BAL_SP"
+        val KEY_BALAMCE = AIR_BALANCE.toString()
+        val MAIN_KEY_SHARED_PREF_BALANVE = "COINS_BAL"
         val KEY_GAME_VARIANT = "gaaame"
     }
 }

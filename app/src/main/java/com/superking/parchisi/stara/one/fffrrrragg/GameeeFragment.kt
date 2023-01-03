@@ -80,7 +80,7 @@ class GameeeFragment : Fragment() {
             var ttt = "$totalDamge/100"
             binding.enemyHealth.text = ttt
 
-            totalBalance = totalBalanceSP.getInt(AviOne.KEY_BALAMCE, 1000)
+            totalBalance = totalBalanceSP.getInt(AviOne.KEY_BALAMCE, 500)
 
             val curentGameVariant = mainViewModel.currentMode.value!!
 
