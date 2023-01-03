@@ -58,12 +58,16 @@ class AviaSecRes : AppCompatActivity() {
         val wn = winOrNot[Random.nextInt(2)]
         when(wn){
             "+" -> {
+                if(currentBalance>200){
                 val wonner = AviaSecUtils.listWin[Random.nextInt(15)]
                 currentBalance = currentBalance.plus(wonner)
                 settingsForBalanceOfCoins.edit().putInt(AIR_BALANCE.toString(),currentBalance).apply()
                 tvBalance.text = "Your won : + $wonner"
 
+            }else {
+                    tvBalance.text = "Your balance is low"
             }
+                }
 
             "-" -> {
                 if (currentBalance>0){
