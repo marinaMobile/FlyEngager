@@ -1,10 +1,13 @@
 package com.superking.parchisi.stara.two
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import androidx.core.content.ContextCompat
+import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.databinding.ActivityAviTwoBinding
 
 class AviTwo : AppCompatActivity() {
@@ -14,6 +17,21 @@ class AviTwo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainbind = ActivityAviTwoBinding.inflate(layoutInflater)
+
+        val shar = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
+
+        val back = shar.getInt("backgr", 4)
+        when (back) {
+            0 -> mainbind.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_1)
+            1 -> mainbind.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_2)
+            2 -> mainbind.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_3)
+            3 -> mainbind.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_4)
+            else -> mainbind.root.setBackgroundResource(R.drawable.hghgg)
+        }
         setContentView(mainbind.root)
 
         bCheckNav()

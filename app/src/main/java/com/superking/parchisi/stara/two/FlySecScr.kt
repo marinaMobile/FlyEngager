@@ -1,5 +1,6 @@
 package com.superking.parchisi.stara.two
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.os.Handler
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.core.content.ContextCompat
 import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.databinding.ActivityFlySecScrBinding
 
@@ -17,6 +19,22 @@ class FlySecScr : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         kxskmsd = ActivityFlySecScrBinding.inflate(layoutInflater)
+
+        val shar = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
+
+        val back = shar.getInt("backgr", 4)
+        when (back) {
+            0 -> kxskmsd.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_1)
+            1 -> kxskmsd.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_2)
+            2 -> kxskmsd.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_3)
+            3 -> kxskmsd.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_4)
+            else -> kxskmsd.root.setBackgroundResource(R.drawable.hghgg)
+        }
+
         setContentView(kxskmsd.root)
         fgtefwfdfssf = AnimationUtils.loadAnimation(applicationContext, R.anim.plane_fly_anim_sec)
         checkCurrentPlane()

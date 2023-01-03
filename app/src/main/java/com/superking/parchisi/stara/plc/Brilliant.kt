@@ -1,13 +1,13 @@
 package com.superking.parchisi.stara.plc
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
-import android.content.SharedPreferences
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.text.Layout
 import android.view.animation.AnimationUtils
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.superking.parchisi.stara.R
@@ -19,13 +19,11 @@ import com.superking.parchisi.stara.plc.MainClass.Companion.AIR_BALANCE
 import com.superking.parchisi.stara.set.AudioPlay
 import com.superking.parchisi.stara.set.AviSet
 import com.superking.parchisi.stara.two.AviTwo
+import kotlin.system.exitProcess
 
 
 class Brilliant : AppCompatActivity() {
     lateinit var music: MediaPlayer
-
-//    val shar = getSharedPreferences("BACK", Context.MODE_PRIVATE)
-//    val back = shar.getInt("back", 4)
 
     lateinit var bindBril: ActivityBrilliantBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,10 +31,6 @@ class Brilliant : AppCompatActivity() {
         bindBril = ActivityBrilliantBinding.inflate(layoutInflater)
 
         val shar = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
-
-
-
-
 
 
 
@@ -76,8 +70,6 @@ class Brilliant : AppCompatActivity() {
 
         bindBril.imageView4.startAnimation(animBlink)
 
-//        music = MediaPlayer.create(this, R.raw.inf);
-//        music.start();
 
 
         AudioPlay.playAudio(this, R.raw.inf)
@@ -93,6 +85,20 @@ class Brilliant : AppCompatActivity() {
             intent.putExtra("WebInt", "policy")
             startActivity(intent)
             finish()
+        }
+
+        bindBril.exit.setOnClickListener {
+            val mBuilder = AlertDialog.Builder(this)
+                .setTitle("Confirm")
+                .setMessage("Are you sure you want to exit?")
+                .setPositiveButton("Yes", null)
+                .setNegativeButton("No", null)
+                .show()
+
+            val mPositiveButton = mBuilder.getButton(AlertDialog.BUTTON_POSITIVE)
+            mPositiveButton.setOnClickListener {
+                exitProcess(0)
+            }
         }
 
         bindBril.one.setOnClickListener {

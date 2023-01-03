@@ -18,8 +18,6 @@ import me.relex.circleindicator.CircleIndicator3
 class ShopActivity : AppCompatActivity() {
     var cont: Int = 0
 
-//    val sharPre = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
-//    val edit = sharPre.edit()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,22 +80,22 @@ class ShopActivity : AppCompatActivity() {
 
         val first = ShopClass()
         first.nameOfBack = "First back"
-        first.category = "duge"
+        first.category = "20000 Air Coins"
         first.poster = R.drawable.back_for_sale_1
 
         val second = ShopClass()
         second.nameOfBack = "second"
-        second.category = "second"
+        second.category = "40000 Air Coins"
         second.poster = R.drawable.back_for_sale_2
 
         val third = ShopClass()
         third.nameOfBack = "third"
-        third.category = "third"
+        third.category = "75000 Air Coins"
         third.poster = R.drawable.back_for_sale_3
 
         val fourth = ShopClass()
         fourth.nameOfBack = "fourth"
-        fourth.category = "fourth"
+        fourth.category = "120000 Air Coins"
         fourth.poster = R.drawable.back_for_sale_4
 
         games = arrayListOf(first, second, third, fourth)

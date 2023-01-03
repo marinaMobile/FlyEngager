@@ -1,10 +1,12 @@
 package com.superking.parchisi.stara.two
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.superking.parchisi.stara.plc.MainClass.Companion.AIR_BALANCE
 import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.databinding.ActivityAviaSecResBinding
@@ -24,6 +26,22 @@ class AviaSecRes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         neudifj = ActivityAviaSecResBinding.inflate(layoutInflater)
+
+        val shar = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
+
+        val back = shar.getInt("backgr", 4)
+        when (back) {
+            0 -> neudifj.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_1)
+            1 -> neudifj.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_2)
+            2 -> neudifj.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_3)
+            3 -> neudifj.root.background =
+                ContextCompat.getDrawable(this, R.drawable.back_for_sale_4)
+            else -> neudifj.root.setBackgroundResource(R.drawable.hghgg)
+        }
+
         setContentView(neudifj.root)
          settingsForBalanceOfCoins = getSharedPreferences("COINS_BAL", MODE_PRIVATE)
         currentBalance = settingsForBalanceOfCoins.getInt(AIR_BALANCE.toString(), 0)
