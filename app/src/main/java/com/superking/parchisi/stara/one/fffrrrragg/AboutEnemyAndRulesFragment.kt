@@ -36,7 +36,7 @@ class AboutEnemyAndRulesFragment : Fragment() {
         fragmentReeeeeloadBinding =
             FragmentAboutEnemyAndRulesBinding.inflate(inflater, container, false)
 
-        fragmentReeeeeloadBinding!!.root.setBackgroundResource(R.drawable.back_for_sale_3)
+//        fragmentReeeeeloadBinding!!.root.setBackgroundResource(R.drawable.back_for_sale_3)
 
             return fragmentReeeeeloadBinding!!.root
     }
