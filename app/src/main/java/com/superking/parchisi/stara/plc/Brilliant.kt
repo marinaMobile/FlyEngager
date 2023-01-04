@@ -32,8 +32,6 @@ class Brilliant : AppCompatActivity() {
 
         val shar = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
 
-
-
         val settings = getSharedPreferences("PREFS_NAME", 0)
 
 
@@ -59,9 +57,6 @@ class Brilliant : AppCompatActivity() {
             setContentView(bindBril.root)
 
         }
-
-
-
 
 
         val animBlink = AnimationUtils.loadAnimation(

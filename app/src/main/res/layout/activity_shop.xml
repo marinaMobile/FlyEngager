@@ -8,6 +8,15 @@
     android:id="@+id/shopLay"
     android:background="@color/black">
 
+    <TextView
+        android:id="@+id/curBal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/gamesVP"
@@ -17,7 +26,7 @@
         app:layout_constraintBottom_toTopOf="@id/indicator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/curBal"/>
 
 
     <me.relex.circleindicator.CircleIndicator3

@@ -1,9 +1,11 @@
 package com.superking.parchisi.stara.inapps
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.qonversion.android.sdk.Qonversion
@@ -13,6 +15,7 @@ import com.qonversion.android.sdk.QonversionPermissionsCallback
 import com.qonversion.android.sdk.dto.QPermission
 import com.qonversion.android.sdk.dto.offerings.QOfferings
 import com.qonversion.android.sdk.dto.products.QProduct
+import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.databinding.ActivityInappBinding
 import com.superking.parchisi.stara.inappsadapter.InappsAdapter
 import com.superking.parchisi.stara.plc.Brilliant
@@ -24,6 +27,16 @@ class InappActiv : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInappBinding.inflate(layoutInflater)
+        val shar = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
+
+        val back = shar.getInt("backgr", 4)
+        when (back) {
+            0 -> binding.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_1)
+            1 -> binding.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_2)
+            2 -> binding.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_3)
+            3 -> binding.root.background = ContextCompat.getDrawable(this, R.drawable.back_for_sale_4)
+            else -> binding.root.setBackgroundResource(R.drawable.hghgg)
+        }
         setContentView(binding.root)
         binding.recyclerViewProductsList.layoutManager = LinearLayoutManager(this)
         binding.recyclerViewProductsList.addItemDecoration(

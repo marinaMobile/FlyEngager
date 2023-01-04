@@ -1,11 +1,15 @@
 package com.superking.parchisi.stara.inapps
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
@@ -13,22 +17,33 @@ import androidx.viewpager2.widget.ViewPager2
 import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.inappsadapter.BackAdapter
 import com.superking.parchisi.stara.inappsadapter.ShopClass
+import com.superking.parchisi.stara.plc.Brilliant
+import com.superking.parchisi.stara.plc.MainClass
 import me.relex.circleindicator.CircleIndicator3
+import kotlin.system.exitProcess
 
 class ShopActivity : AppCompatActivity() {
     var cont: Int = 0
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shop)
 
+        val settingsForBalanceOfCoins = getSharedPreferences("COINS_BAL", MODE_PRIVATE)
+        val currentBalance = settingsForBalanceOfCoins.getInt(MainClass.AIR_BALANCE.toString(), 0)
+
+
+        val curBal: TextView = findViewById(R.id.curBal)
+        curBal.text = "$currentBalance+"
+
         setUpGamesPager()
+
     }
 
     fun setUpGamesPager() {
-        val sharPre = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
-        val edddd = sharPre.edit()
+
 
         val gamesViewPager: ViewPager2 = findViewById(R.id.gamesVP)
         val indicator: CircleIndicator3 = findViewById(R.id.indicator)
@@ -44,10 +59,10 @@ class ShopActivity : AppCompatActivity() {
             page.scaleY = (0.85f+r*0.15f)
             page.setOnClickListener{
                 when (cont) {
-                    0 -> edddd.putInt("backgr", 0).apply()
-                    1 -> edddd.putInt("backgr", 1).apply()
-                    2 -> edddd.putInt("backgr", 2).apply()
-                    3 -> edddd.putInt("backgr", 3).apply()
+                    0 -> forZero(0, 20000)
+                    1 -> forZero(1, 40000)
+                    2 -> forZero(2, 75000)
+                    3 -> forZero(3, 12000)
                 }
             }
         }
@@ -101,6 +116,42 @@ class ShopActivity : AppCompatActivity() {
         games = arrayListOf(first, second, third, fourth)
 
         return games
+    }
+
+    fun forZero(back: Int, curr: Int) {
+
+        val settingsForBalanceOfCoins = getSharedPreferences("COINS_BAL", MODE_PRIVATE)
+        val currentBalance = settingsForBalanceOfCoins.getInt(MainClass.AIR_BALANCE.toString(), 0)
+        val edit = settingsForBalanceOfCoins.edit()
+        val sharPre = getSharedPreferences("BACKS", Context.MODE_PRIVATE)
+        val edddd = sharPre.edit()
+        val txCurBal = findViewById<TextView>(R.id.curBal)
+
+        val currBal = currentBalance - curr
+        if (currBal<=0) {
+            val build = AlertDialog.Builder(this)
+                .setTitle("Air coins ")
+                .setMessage("You don't have enough air coins to buy this background!")
+                .setPositiveButton("Visit shop page", null)
+                .setNegativeButton("Ok", null)
+                .show()
+            val mPositiveButton = build.getButton(AlertDialog.BUTTON_POSITIVE)
+            mPositiveButton.setOnClickListener {
+                startActivity(Intent(this, InappActiv::class.java))
+                finish()
+            }
+        } else {
+            edit.putInt(MainClass.AIR_BALANCE.toString(), currBal).apply()
+            txCurBal.text = "$currBal+"
+            edddd.putInt("backgr", back).apply()
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        startActivity(Intent(this, Brilliant::class.java))
+        finish()
     }
 
 }

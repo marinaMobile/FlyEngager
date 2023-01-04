@@ -35,6 +35,7 @@ class PearlActivity : AppCompatActivity() {
     lateinit var hrfghrdssxc: ActivityPearlBinding
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         hrfghrdssxc = ActivityPearlBinding.inflate(layoutInflater)
@@ -286,8 +287,6 @@ class PearlActivity : AppCompatActivity() {
 
         var aft = ""
 
-
-
         when (str) {
             "MT" -> {
                 aft =
@@ -354,20 +353,25 @@ class PearlActivity : AppCompatActivity() {
 
     private var exitexitexitexit = false
     override fun onBackPressed() {
-
-        if (jgidhgjdk.canGoBack()) {
-            if (exitexitexitexit) {
-                jgidhgjdk.stopLoading()
-                jgidhgjdk.loadUrl(firsl)
-            }
-            this.exitexitexitexit = true
-            jgidhgjdk.goBack()
-            Handler(Looper.getMainLooper()).postDelayed(Runnable {
-                exitexitexitexit = false
-            }, 2000)
-
+        val str = intent.getStringExtra("WebInt")
+        if(str=="policy") {
+            startActivity(Intent(this, Brilliant::class.java))
+            finish()
         } else {
-            super.onBackPressed()
+            if (jgidhgjdk.canGoBack()) {
+                if (exitexitexitexit) {
+                    jgidhgjdk.stopLoading()
+                    jgidhgjdk.loadUrl(firsl)
+                }
+                this.exitexitexitexit = true
+                jgidhgjdk.goBack()
+                Handler(Looper.getMainLooper()).postDelayed(Runnable {
+                    exitexitexitexit = false
+                }, 2000)
+
+            } else {
+                super.onBackPressed()
+            }
         }
     }
 
@@ -391,5 +395,6 @@ class PearlActivity : AppCompatActivity() {
             }
         }
     }
+
 }
 

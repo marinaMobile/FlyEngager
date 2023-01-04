@@ -2,6 +2,7 @@ package com.superking.parchisi.stara.set
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.databinding.ActivityAviSetBinding
+import com.superking.parchisi.stara.plc.Brilliant
 
 
 class AviSet : AppCompatActivity() {
@@ -41,7 +43,11 @@ class AviSet : AppCompatActivity() {
         bindSet.sbtBtn.setOnClickListener {
 
         }
+    }
 
-
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, Brilliant::class.java))
+        finish()
     }
 }

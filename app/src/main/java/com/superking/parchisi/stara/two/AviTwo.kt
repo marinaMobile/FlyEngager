@@ -9,6 +9,7 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import com.superking.parchisi.stara.R
 import com.superking.parchisi.stara.databinding.ActivityAviTwoBinding
+import com.superking.parchisi.stara.plc.Brilliant
 
 class AviTwo : AppCompatActivity() {
     private lateinit var mainbind : ActivityAviTwoBinding
@@ -150,6 +151,11 @@ class AviTwo : AppCompatActivity() {
          fifthHundRadB.visibility = View.VISIBLE
          isDash = true
 
+    }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, Brilliant::class.java))
+        finish()
     }
 }
